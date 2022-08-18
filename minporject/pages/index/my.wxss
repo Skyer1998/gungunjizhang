@@ -1,0 +1,34 @@
+/* pages/index/my.wxss */
+.my-box{
+    margin-top: 30rpx;
+    border: black 3rpx solid;
+}
+.biaotou{
+    width: 33.3%;
+    text-align: center;
+}
+.fenqi-list-title{
+    margin-top: 30rpx;
+    text-align: center;
+    align-items: center;
+    border: 3rpx black solid;
+    margin-left: 10%;
+    width: 80%;
+}
+.fenqititle{
+    display: flex;
+    margin-bottom: 20rpx;
+}
+.fenqi-title-item{
+    width: 20%;
+    border: 2rpx solid black;
+    text-align: center;
+}
+.fenqi-item{
+    display:flex;
+}
+.fenqi-item-list{
+    width: 20%;
+    text-align: center; 
+}
+

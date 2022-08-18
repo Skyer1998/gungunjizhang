@@ -1,0 +1,5 @@
+/* pages/get/feesum.wxss */
+.f2-chart {
+    width: 100%;
+    height: 1000rpx;
+  }

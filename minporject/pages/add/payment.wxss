@@ -1,0 +1,23 @@
+/* pages/add/payment.wxss */
+
+.picker{
+    border: black 3rpx solid;
+    border-radius: 10rpx;
+    margin-top: 30rpx;
+
+}
+.demo-box{
+    margin-top: 50rpx;
+    width: 80%;
+    margin-left: 10%;
+}
+.addLiushui{
+    border-radius: 10rpx;
+    width: 100%;
+    margin-top: 20rpx;
+    background-color: #0066FF ;
+}
+.huankuan{
+    color: red;
+    margin-left: 25%;
+}

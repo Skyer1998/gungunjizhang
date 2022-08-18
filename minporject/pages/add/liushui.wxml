@@ -1,0 +1,24 @@
+<!--pages/add/liushui.wxml-->
+<view class="demo-box">
+  <form bindsubmit="onSubmit" bindreset="onReset">
+    <picker class="picker" value="{{index}}" range="{{list}}" range-key="card_number" bindchange='bindPickerChange'>
+	<view>请选择卡片:{{list[index].card_number}}</view>
+    </picker>
+    <view class="section" wx:if="{{isChecked}}">
+  <picker mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+    <input class="picker" name="money" type="digit" placeholder="请输入刷卡金额"></input>
+    <input class="picker" name="fee" type="digit" placeholder="请输入手续费"></input>
+    <switch checked="{{isChecked}}" bindchange="changeSwitch" color="#0066ff"/>刷卡日期不是今天
+    <button form-type="submit"  class="addLiushui">添加流水</button>
+    <button form-type="reset"  class="addLiushui">重置</button>
+    </form>
+    </view>
+
+
+     
+    

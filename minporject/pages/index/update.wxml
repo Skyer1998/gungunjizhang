@@ -1,0 +1,26 @@
+<!--pages/index/update.wxml-->
+<view class="update">
+<view class="demo-box">
+
+  <form bindsubmit="onSubmit" bindreset="onReset">
+   <!--<picker class="picker" value="{{index}}" range="{{list}}" range-key="card_number" bindchange='bindPickerChange'>
+	<view>请选择卡片:{{list[index].card_number}}</view>
+</picker>--> 
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}">
+    <view class="picker">
+      当前选择：{{list[index]}}
+    </view>
+  </picker>
+</view>
+
+    <input class="picker" name="bill_credit" type="digit" placeholder="请输入账单金额"></input>
+    <input class="picker" name="now_payment_bill" type="digit" placeholder="请输入还需还款金额"></input>
+    <button form-type="submit"  class="button_get">更新账单</button>
+    <button form-type="reset"  class="button_get" >重置</button>
+  </form>
+  
+</view>
+</view>
+
+

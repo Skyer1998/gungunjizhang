@@ -1,0 +1,23 @@
+<!--pages/add/fenqi.wxml-->
+<view class="demo-box">
+  <form bindsubmit="onSubmit" bindreset="onReset">
+    <picker class="picker" value="{{index}}" range="{{list}}" range-key="card_number" bindchange='bindPickerChange'>
+	<view>请选择卡片:{{list[index].card_number}}</view>
+</picker>
+    <input class="picker" name="money" type="digit" placeholder="请输入分期金额"></input>
+    <input class="picker" name="qishu" type="number " placeholder="请输入期数"></input>
+    <input class="picker" name="e_money" type="digit" placeholder="请输入每期金额"></input>
+    <input class="picker" name="fee" type="digit" placeholder="请输入手续费"></input>
+    <input class="picker" name="e_fee" type="digit" placeholder="请输入每期手续费"></input>
+    <view class="section" wx:if="{{isChecked}}">
+    <picker mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+    <switch checked="{{isChecked}}" bindchange="changeSwitch" color="#0066ff" style="margin-top: 30rpx;"/>分期日期不是今天
+    <button form-type="submit"class="addLiushui">添加分期</button>
+    <button form-type="reset" class="addLiushui">重置</button>
+    </form>
+    </view>

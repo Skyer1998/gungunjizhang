@@ -1,0 +1,31 @@
+/* pages/index/card_liushui.wxss */
+.box-demo{
+    display: flex;
+   
+}
+.grid-item-title{
+    width: 50%;
+    background-color:#444444 ;
+    height: 100rpx;
+    text-align: center;
+    display: grid;
+    color: white;
+}
+.grid-title{
+    display:flex;
+}
+.grid-title-item{
+  border-radius: 10rpx;
+  background-color: #EE7700;
+  width: 33.3%;
+  text-align: center;
+}
+.gridliushui-item{
+    text-align: center;
+    width: 33.3%;
+}
+.gridliushui{
+    display: flex;
+}
+
+

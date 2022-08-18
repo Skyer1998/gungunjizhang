@@ -1,0 +1,25 @@
+<!--pages/index/fuzhu.wxml-->
+<view class="grid-list">
+    <view class="grid-item" bindtap="addfenqi">
+    <image src="../images/fenqi.jpeg"></image>
+    <text>添加分期</text>
+    </view>
+    <view class="grid-item" bindtap="updatebill">
+    <image src="/images/update.jpeg"></image>
+    <text>更新账单</text>
+    </view>
+    <view class="grid-item" bindtap="addzhengxin">
+    <image src="../images/zhengxin.jpeg"></image>
+    <text>添加征信</text>
+    </view>
+    <view class="grid-item" bindtap="getxyklist">
+    <image src="../images/list.jpeg"></image>
+    <text>信用卡申请记录</text>
+    </view>
+    <view class="grid-item" bindtap="addpayment">
+    <image src="../images/addpayment.jpeg"></image>
+    <text>添加还款</text>
+    </view>
+
+</view>
+

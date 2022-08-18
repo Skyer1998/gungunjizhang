@@ -1,0 +1,2 @@
+<!--pages/get/feesum.wxml-->
+<f2 class="f2-chart" onInit="{{onInitChart}}" />

@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index/my",
+        "pages/index/update",
+        "pages/add/liushui",
+        "pages/add/fenqi",
+        "pages/add/zhengxin",
+        "pages/index/fuzhu",
+        "pages/index/card_liushui",
+        "pages/add/payment",
+        "pages/get/xykapply",
+        "pages/get/feesum"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarTitleText": "滚滚记账",
+        "navigationBarBackgroundColor": "#0066ff",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "账户列表",
+                "iconPath": "images/list.jpeg",
+                "selectedIconPath": "images/list.jpeg"
+            },
+            {
+                "pagePath": "pages/add/liushui",
+                "text": "添加流水",
+                "iconPath": "pages/images/liushu.jpeg",
+                "selectedIconPath": "pages/images/liushu.jpeg"
+            },
+            {
+                "pagePath": "pages/index/my",
+                "text": "我的",
+                "iconPath": "images/my.jpeg",
+                "selectedIconPath": "images/my.jpeg"
+            },
+            {
+                "pagePath": "pages/index/fuzhu",
+                "text": "其他功能",
+                "iconPath": "pages/images/fuzhu.jpeg",
+                "selectedIconPath": "pages/images/fuzhu.jpeg"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

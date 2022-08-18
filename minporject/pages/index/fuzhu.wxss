@@ -1,0 +1,28 @@
+/* pages/index/fuzhu.wxss */
+.grid-list{
+    margin-top: 50rpx;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1rpx solid #efefef;
+    border-top: 1rpx solid #efefef;
+}
+.grid-item{
+    width: 50%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1rpx solid #efefef;
+    border-right: 1rpx solid #efefef;
+    box-sizing: border-box;
+}
+.grid-item image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.grid-item text{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+   
+}

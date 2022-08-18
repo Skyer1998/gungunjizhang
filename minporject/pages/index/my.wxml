@@ -1,0 +1,42 @@
+
+<view wx:for="{{list}}" wx:key="index" class="my-box">
+<text>人物id：{{index}}</text>
+<!--表头-->
+<view style="display: flex;">
+<view class="biaotou">卡号</view>
+<view class="biaotou">银行</view>
+<view class="biaotou">授信额度</view>
+</view>
+<view wx:for="{{list[index]}}" style="display: flex">
+<text class="biaotou">{{item.card_number}}</text>
+<text class="biaotou">{{item.bank}}</text>
+<text class="biaotou">{{item.credit_limit}}</text>
+</view>
+<!--表尾-->
+<view style="display: flex;">
+<text class="biaotou">总授信:{{credit_limit[index].creditlimitsum}}</text>
+<text class="biaotou">账单:{{credit_limit[index].billcreditsum}}</text>
+<text class="biaotou" style="color: red;">还款:{{credit_limit[index].nowpaymentbillsum}}</text>
+</view>
+<view wx:if="{{index<2}}">
+<view class="fenqi-list-title">分期列表</view>
+<view class="fenqititle">
+<view class="fenqi-title-item">分期卡号</view>
+<view class="fenqi-title-item">分期金额</view>
+<view style="width: 10%;text-align: center;border: black 2rpx solid;">期数</view>
+<view class="fenqi-title-item">每月金额</view>
+<view class="fenqi-title-item">分期日期</view>
+</view>
+<view wx:for="{{fenqi.list[index]}}" class="fenqi-item">
+<view class="fenqi-item-list">{{item.card_number}}</view>
+<view class="fenqi-item-list">{{item.money}}</view>
+<view style="width: 10%;text-align: center;">{{item.qishu}}</view>
+<view class="fenqi-item-list">{{item.e_money}}</view>
+<view style="width: 30%;text-align: center;">{{item.fenqi_date}}</view>
+
+</view>
+</view>
+</view>
+
+
+
