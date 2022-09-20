@@ -44,13 +44,14 @@ public class XykIndexDao {
     }
     public ArrayList<XykListsum> getsumlistall(){
         ArrayList<XykListsum> xykListsums=new ArrayList<>();
-        String sql="SELECT SUM(credit_limit) creditlimitsum ,SUM(bill_credit) billcreditsum, SUM(now_payment_bill) nowpaymentbillsum FROM list,bill_new WHERE person_id=? AND list.card_number=bill_new.card_number AND  state=\"new\";";
+        String sql="SELECT SUM(credit_limit) creditlimitsum ,SUM(bill_credit) billcreditsum, SUM(now_payment_bill) nowpaymentbillsum ,SUM(now_limit) nowlimit FROM list,bill_new WHERE person_id=? AND list.card_number=bill_new.card_number AND  state=\"new\";";
         for (int i = 1; i <=3 ; i++) {
             Map<String, Object> stringObjectMap = jdbcTemplate.queryForMap(sql,i);
             XykListsum xykListsum=new XykListsum();
             xykListsum.setNowpaymentbillsum((BigDecimal) stringObjectMap.get("nowpaymentbillsum"));
             xykListsum.setBillcreditsum((BigDecimal) stringObjectMap.get("billcreditsum"));
             xykListsum.setCreditlimitsum((BigDecimal) stringObjectMap.get("creditlimitsum"));
+            xykListsum.setNow_limit((BigDecimal) stringObjectMap.get("nowlimit"));
             xykListsums.add(xykListsum);
         }
         return  xykListsums;

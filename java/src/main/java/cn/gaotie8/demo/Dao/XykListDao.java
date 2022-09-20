@@ -17,10 +17,11 @@ public class XykListDao {
         return query;
     }
     public List<Map<String, Object>> getXyklistbypersonid(int person_id){
-        String sql="SELECT card_number,bank,credit_limit FROM list WHERE person_id=?;";
+        String sql="SELECT card_number,bank,credit_limit,now_limit FROM list WHERE person_id=?;";
         List<Map<String, Object>> maps = jdbcTemplate.queryForList(sql, person_id);
         return maps;
     }
+
     public List<List<Map<String, Object>>> getxykalllist(){
         List<List<Map<String, Object>>> list =new ArrayList<>();
         for (int i = 1; i <=3 ; i++) {

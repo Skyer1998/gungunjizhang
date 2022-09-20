@@ -1,22 +1,37 @@
 package cn.gaotie8.demo.Dao;
 
-import cn.gaotie8.demo.utils.JdbcUtils;
-import cn.gaotie8.demo.utils.XykListsum;
-import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class Test {
-    public static void main(String[] args) {
-        XykZhengxinDao xykZhengxinDao=new XykZhengxinDao();
-        System.out.println(xykZhengxinDao.getfuzhaimonth()
-        );
-
+    public static void sort(Comparable[] arr) {
+        int j;
+        for (int gap = arr.length / 2; gap >  0; gap /= 2) {
+            for (int i = gap; i < arr.length; i++) {
+                Comparable tmp = arr[i];
+                for (j = i; j >= gap && tmp.compareTo(arr[j - gap]) < 0; j -= gap) {
+                    arr[j] = arr[j - gap];
+                }
+                arr[j] = tmp;
+            }
+        }
+    }
+    public static void mss(String[] args) {
+        Comparable[] arr ={32,58,36,20,1,9,6,3,5,8,4,12,99};
+        sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            Comparable comparable = arr[i];
+        }
 
 
     }
-}
+
+    public static void main(String[] args) {
+
+
+    }
+
+
+
+};
+
+

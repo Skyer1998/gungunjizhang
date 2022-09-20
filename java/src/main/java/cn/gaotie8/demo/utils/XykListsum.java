@@ -8,4 +8,5 @@ public class XykListsum {
     private BigDecimal creditlimitsum;
     private BigDecimal billcreditsum;
     private BigDecimal nowpaymentbillsum;
+    private BigDecimal now_limit;
 }

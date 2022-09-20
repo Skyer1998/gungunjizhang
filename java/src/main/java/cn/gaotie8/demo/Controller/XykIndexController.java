@@ -32,4 +32,5 @@ public class XykIndexController {
         return  xykIndexDao.getsumlistall();
     }
 
+
 }

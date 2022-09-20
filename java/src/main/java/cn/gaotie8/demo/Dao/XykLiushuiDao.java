@@ -31,7 +31,19 @@ public class XykLiushuiDao {
              addpayment(card_number,money);
          }
          int update = jdbcTemplate.update(sql, date, card_number, money, fee,type);
+         BigDecimal selectlimit = selectlimit(card_number);
+         BigDecimal subtract = selectlimit.subtract(money);
+         updatlimit(card_number,subtract);
          return update;
+     }
+     public  BigDecimal selectlimit(int card_number){
+         String sql ="select now_limit from list where card_number=?";
+         Map<String, Object> stringObjectMap = jdbcTemplate.queryForMap(sql,card_number);
+         return (BigDecimal) stringObjectMap.get("now_limit");
+     }
+     public void updatlimit(int card_number,BigDecimal money){
+         String sql="update list set now_limit=? where card_number=?";
+         int update = jdbcTemplate.update(sql, money, card_number);
      }
      public List<XykLiushui> getoneLiushuiBykahao(int card_number){
          String sql=" SELECT `date`, `card_number`, `money`, `fee` FROM `xyk_list`.`liushui` WHERE card_number=? LIMIT 0, 1000;";
