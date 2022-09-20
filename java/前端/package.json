@@ -1,14 +1,7 @@
 {
-  "name": "miniprogram-2",
-  "version": "1.0.0",
-  "main": ".eslintrc.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@antv/f2-wx": "^4.0.27"
+    "@antv/f6": "^0.0.18",
+    "@antv/f6-wx": "^0.0.6",
+    "@antv/wx-f2": "^2.1.1"
   }
 }

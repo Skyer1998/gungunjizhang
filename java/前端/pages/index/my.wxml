@@ -1,0 +1,28 @@
+
+<view wx:for="{{list}}" wx:key="index" class="my-box">
+<text>人物id：{{index}}</text>
+<!--表头-->
+<view style="display: flex;">
+<view class="biaotou">卡号</view>
+<view class="biaotou">银行</view>
+<view class="biaotou">授信额度</view>
+<view class="biaotou">可用额度</view>
+</view>
+<view wx:for="{{list[index]}}" style="display: flex">
+<text class="biaotou">{{item.card_number}}</text>
+<text class="biaotou">{{item.bank}}</text>
+<text class="biaotou">{{item.credit_limit}}</text>
+<text class="biaotou">{{item.now_limit}}</text>
+</view>
+<!--表尾-->
+<view style="display: flex;">
+<text class="biaotou">总授信:{{credit_limit[index].creditlimitsum}}</text>
+<text class="biaotou">账单:{{credit_limit[index].billcreditsum}}</text>
+<text class="biaotou">可用:{{credit_limit[index].now_limit}}</text>
+<text class="biaotou" style="color: red;">还款:{{credit_limit[index].nowpaymentbillsum}}</text>
+</view>
+
+
+</view>
+
+

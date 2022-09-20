@@ -1,0 +1,5 @@
+/* pages/get/zoushi.wxss */
+.f2-chart {
+    width: 100%;
+    height: 300rpx;
+  }

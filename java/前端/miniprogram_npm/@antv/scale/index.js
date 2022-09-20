@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1660979582043, function(require, module, exports) {
+__DEFINE__(1661774171683, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.registerTickMethod = exports.getTickMethod = exports.registerScale = exports.getScale = exports.Scale = exports.Quantize = exports.Quantile = exports.TimeCat = exports.Time = exports.Pow = exports.Log = exports.Linear = exports.Identity = exports.Category = void 0;
@@ -45,8 +45,8 @@ factory_1.registerScale('timeCat', time_1.default);
 factory_1.registerScale('quantize', quantize_1.default);
 factory_1.registerScale('quantile', quantile_1.default);
 //# sourceMappingURL=index.js.map
-}, function(modId) {var map = {"./base":1660979582044,"./category/base":1660979582046,"./category/time":1660979582047,"./continuous/linear":1660979582050,"./continuous/log":1660979582052,"./continuous/pow":1660979582054,"./continuous/time":1660979582055,"./continuous/quantize":1660979582056,"./continuous/quantile":1660979582057,"./factory":1660979582058,"./identity/index":1660979582059,"./tick-method/index":1660979582060}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582044, function(require, module, exports) {
+}, function(modId) {var map = {"./base":1661774171684,"./category/base":1661774171686,"./category/time":1661774171687,"./continuous/linear":1661774171690,"./continuous/log":1661774171692,"./continuous/pow":1661774171694,"./continuous/time":1661774171695,"./continuous/quantize":1661774171696,"./continuous/quantile":1661774171697,"./factory":1661774171698,"./identity/index":1661774171699,"./tick-method/index":1661774171700}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171684, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -170,8 +170,8 @@ var Scale = /** @class */ (function () {
 }());
 exports.default = Scale;
 //# sourceMappingURL=base.js.map
-}, function(modId) { var map = {"./tick-method/register":1660979582045}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582045, function(require, module, exports) {
+}, function(modId) { var map = {"./tick-method/register":1661774171685}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171685, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.registerTickMethod = exports.getTickMethod = void 0;
@@ -196,7 +196,7 @@ function registerTickMethod(key, method) {
 exports.registerTickMethod = registerTickMethod;
 //# sourceMappingURL=register.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582046, function(require, module, exports) {
+__DEFINE__(1661774171686, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -286,8 +286,8 @@ var Category = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Category;
 //# sourceMappingURL=base.js.map
-}, function(modId) { var map = {"../base":1660979582044}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582047, function(require, module, exports) {
+}, function(modId) { var map = {"../base":1661774171684}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171687, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -355,8 +355,8 @@ var TimeCat = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = TimeCat;
 //# sourceMappingURL=time.js.map
-}, function(modId) { var map = {"../util/time":1660979582048,"./base":1660979582046}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582048, function(require, module, exports) {
+}, function(modId) { var map = {"../util/time":1661774171688,"./base":1661774171686}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171688, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTickInterval = exports.YEAR = exports.MONTH = exports.DAY = exports.HOUR = exports.MINUTE = exports.SECOND = exports.toTimeStamp = exports.timeFormat = void 0;
@@ -436,8 +436,8 @@ function getTickInterval(min, max, tickCount) {
 }
 exports.getTickInterval = getTickInterval;
 //# sourceMappingURL=time.js.map
-}, function(modId) { var map = {"./bisector":1660979582049}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582049, function(require, module, exports) {
+}, function(modId) { var map = {"./bisector":1661774171689}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171689, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -469,7 +469,7 @@ function default_1(getter) {
 exports.default = default_1;
 //# sourceMappingURL=bisector.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582050, function(require, module, exports) {
+__DEFINE__(1661774171690, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -498,8 +498,8 @@ var Linear = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Linear;
 //# sourceMappingURL=linear.js.map
-}, function(modId) { var map = {"./base":1660979582051}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582051, function(require, module, exports) {
+}, function(modId) { var map = {"./base":1661774171691}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171691, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -586,8 +586,8 @@ var Continuous = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Continuous;
 //# sourceMappingURL=base.js.map
-}, function(modId) { var map = {"../base":1660979582044}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582052, function(require, module, exports) {
+}, function(modId) { var map = {"../base":1661774171684}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171692, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -679,8 +679,8 @@ var Log = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Log;
 //# sourceMappingURL=log.js.map
-}, function(modId) { var map = {"../util/math":1660979582053,"./base":1660979582051}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582053, function(require, module, exports) {
+}, function(modId) { var map = {"../util/math":1661774171693,"./base":1661774171691}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171693, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.precisionAdd = exports.getLogPositiveMin = exports.log = exports.calBase = void 0;
@@ -747,7 +747,7 @@ function precisionAdd(num1, num2) {
 exports.precisionAdd = precisionAdd;
 //# sourceMappingURL=math.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582054, function(require, module, exports) {
+__DEFINE__(1661774171694, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -796,8 +796,8 @@ var Pow = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Pow;
 //# sourceMappingURL=pow.js.map
-}, function(modId) { var map = {"../util/math":1660979582053,"./base":1660979582051}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582055, function(require, module, exports) {
+}, function(modId) { var map = {"../util/math":1661774171693,"./base":1661774171691}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171695, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -899,8 +899,8 @@ var Time = /** @class */ (function (_super) {
 }(linear_1.default));
 exports.default = Time;
 //# sourceMappingURL=time.js.map
-}, function(modId) { var map = {"../util/time":1660979582048,"./linear":1660979582050}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582056, function(require, module, exports) {
+}, function(modId) { var map = {"../util/time":1661774171688,"./linear":1661774171690}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171696, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -979,8 +979,8 @@ var Quantize = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Quantize;
 //# sourceMappingURL=quantize.js.map
-}, function(modId) { var map = {"./base":1660979582051}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582057, function(require, module, exports) {
+}, function(modId) { var map = {"./base":1661774171691}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171697, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1001,8 +1001,8 @@ var Quantile = /** @class */ (function (_super) {
 }(quantize_1.default));
 exports.default = Quantile;
 //# sourceMappingURL=quantile.js.map
-}, function(modId) { var map = {"./quantize":1660979582056}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582058, function(require, module, exports) {
+}, function(modId) { var map = {"./quantize":1661774171696}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171698, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.registerScale = exports.getScale = exports.Scale = void 0;
@@ -1021,8 +1021,8 @@ function registerClass(key, cls) {
 }
 exports.registerScale = registerClass;
 //# sourceMappingURL=factory.js.map
-}, function(modId) { var map = {"./base":1660979582044}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582059, function(require, module, exports) {
+}, function(modId) { var map = {"./base":1661774171684}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171699, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1062,8 +1062,8 @@ var Identity = /** @class */ (function (_super) {
 }(base_1.default));
 exports.default = Identity;
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"../base":1660979582044}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582060, function(require, module, exports) {
+}, function(modId) { var map = {"../base":1661774171684}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171700, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.registerTickMethod = exports.getTickMethod = void 0;
@@ -1091,8 +1091,8 @@ register_1.registerTickMethod('pow', pow_1.default);
 register_1.registerTickMethod('quantile', quantile_1.default);
 register_1.registerTickMethod('d3-linear', d3_linear_1.default);
 //# sourceMappingURL=index.js.map
-}, function(modId) { var map = {"./cat":1660979582061,"./d3-linear":1660979582062,"./linear":1660979582066,"./log":1660979582069,"./pow":1660979582070,"./quantile":1660979582072,"./r-prettry":1660979582073,"./register":1660979582045,"./time":1660979582074,"./time-cat":1660979582075,"./time-pretty":1660979582076}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582061, function(require, module, exports) {
+}, function(modId) { var map = {"./cat":1661774171701,"./d3-linear":1661774171702,"./linear":1661774171706,"./log":1661774171709,"./pow":1661774171710,"./quantile":1661774171712,"./r-prettry":1661774171713,"./register":1661774171685,"./time":1661774171714,"./time-cat":1661774171715,"./time-pretty":1661774171716}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171701, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1140,7 +1140,7 @@ function calculateCatTicks(cfg) {
 exports.default = calculateCatTicks;
 //# sourceMappingURL=cat.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582062, function(require, module, exports) {
+__DEFINE__(1661774171702, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1160,8 +1160,8 @@ function d3LinearTickMethod(cfg) {
 }
 exports.default = d3LinearTickMethod;
 //# sourceMappingURL=d3-linear.js.map
-}, function(modId) { var map = {"../util/d3-linear":1660979582063,"../util/interval":1660979582064,"../util/strict-limit":1660979582065}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582063, function(require, module, exports) {
+}, function(modId) { var map = {"../util/d3-linear":1661774171703,"../util/interval":1661774171704,"../util/strict-limit":1661774171705}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171703, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.D3Linear = void 0;
@@ -1283,7 +1283,7 @@ function tickIncrement(start, stop, count) {
 }
 //# sourceMappingURL=d3-linear.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582064, function(require, module, exports) {
+__DEFINE__(1661774171704, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1323,7 +1323,7 @@ function intervalTicks(min, max, interval) {
 exports.default = intervalTicks;
 //# sourceMappingURL=interval.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582065, function(require, module, exports) {
+__DEFINE__(1661774171705, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1354,7 +1354,7 @@ function strictLimit(cfg, defaultMin, defaultMax) {
 exports.default = strictLimit;
 //# sourceMappingURL=strict-limit.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582066, function(require, module, exports) {
+__DEFINE__(1661774171706, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1379,8 +1379,8 @@ function linear(cfg) {
 }
 exports.default = linear;
 //# sourceMappingURL=linear.js.map
-}, function(modId) { var map = {"../util/extended":1660979582067,"../util/interval":1660979582064,"../util/strict-limit":1660979582065}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582067, function(require, module, exports) {
+}, function(modId) { var map = {"../util/extended":1661774171707,"../util/interval":1661774171704,"../util/strict-limit":1661774171705}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171707, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ALL_Q = exports.DEFAULT_Q = void 0;
@@ -1561,8 +1561,8 @@ function extended(dMin, dMax, n, onlyLoose, Q, w) {
 }
 exports.default = extended;
 //# sourceMappingURL=extended.js.map
-}, function(modId) { var map = {"./pretty-number":1660979582068}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582068, function(require, module, exports) {
+}, function(modId) { var map = {"./pretty-number":1661774171708}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171708, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.prettyNumber = void 0;
@@ -1573,7 +1573,7 @@ function prettyNumber(n) {
 exports.prettyNumber = prettyNumber;
 //# sourceMappingURL=pretty-number.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582069, function(require, module, exports) {
+__DEFINE__(1661774171709, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var math_1 = require("../util/math");
@@ -1607,8 +1607,8 @@ function calculateLogTicks(cfg) {
 }
 exports.default = calculateLogTicks;
 //# sourceMappingURL=log.js.map
-}, function(modId) { var map = {"../util/math":1660979582053}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582070, function(require, module, exports) {
+}, function(modId) { var map = {"../util/math":1661774171693}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171710, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var math_1 = require("../util/math");
@@ -1630,8 +1630,8 @@ function calculatePowTicks(cfg) {
 }
 exports.default = calculatePowTicks;
 //# sourceMappingURL=pow.js.map
-}, function(modId) { var map = {"../util/math":1660979582053,"../util/pretty":1660979582071}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582071, function(require, module, exports) {
+}, function(modId) { var map = {"../util/math":1661774171693,"../util/pretty":1661774171711}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171711, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var pretty_number_1 = require("./pretty-number");
@@ -1691,8 +1691,8 @@ function pretty(min, max, m) {
 }
 exports.default = pretty;
 //# sourceMappingURL=pretty.js.map
-}, function(modId) { var map = {"./pretty-number":1660979582068}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582072, function(require, module, exports) {
+}, function(modId) { var map = {"./pretty-number":1661774171708}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171712, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -1748,7 +1748,7 @@ function calculateTicks(cfg) {
 exports.default = calculateTicks;
 //# sourceMappingURL=quantile.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582073, function(require, module, exports) {
+__DEFINE__(1661774171713, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = require("@antv/util");
@@ -1773,8 +1773,8 @@ function linearPretty(cfg) {
 }
 exports.default = linearPretty;
 //# sourceMappingURL=r-prettry.js.map
-}, function(modId) { var map = {"../util/interval":1660979582064,"../util/pretty":1660979582071,"../util/strict-limit":1660979582065}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582074, function(require, module, exports) {
+}, function(modId) { var map = {"../util/interval":1661774171704,"../util/pretty":1661774171711,"../util/strict-limit":1661774171705}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171714, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var time_1 = require("../util/time");
@@ -1807,8 +1807,8 @@ function calculateTimeTicks(cfg) {
 }
 exports.default = calculateTimeTicks;
 //# sourceMappingURL=time.js.map
-}, function(modId) { var map = {"../util/time":1660979582048}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582075, function(require, module, exports) {
+}, function(modId) { var map = {"../util/time":1661774171688}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171715, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1825,8 +1825,8 @@ function timeCat(cfg) {
 }
 exports.default = timeCat;
 //# sourceMappingURL=time-cat.js.map
-}, function(modId) { var map = {"./cat":1660979582061}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1660979582076, function(require, module, exports) {
+}, function(modId) { var map = {"./cat":1661774171701}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1661774171716, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var time_1 = require("../util/time");
@@ -1949,8 +1949,8 @@ function timePretty(cfg) {
 }
 exports.default = timePretty;
 //# sourceMappingURL=time-pretty.js.map
-}, function(modId) { var map = {"../util/time":1660979582048}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1660979582043);
+}, function(modId) { var map = {"../util/time":1661774171688}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1661774171683);
 })()
 //miniprogram-npm-outsideDeps=["@antv/util","tslib","fecha"]
 //# sourceMappingURL=index.js.map

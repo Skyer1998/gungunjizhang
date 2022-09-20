@@ -1,0 +1,54 @@
+<!--pages/add/liushui.wxml-->
+
+
+<form bindsubmit="onSubmit" bindreset="onReset">
+
+  <view class="cu-form-group">
+    <view class="">卡片：</view>
+    <view>
+      <picker class="" value="{{index}}" range="{{list}}" range-key="card_number" bindchange='bindPickerChange'>
+        <view class="">{{list[index].card_number}}</view>
+      </picker>
+    </view>
+  </view>
+
+
+
+  <view class="cu-form-group">
+    <view class="title">刷卡日期不是今天</view>
+    <switch class="red sm" checked="{{isChecked}}" bindchange="changeSwitch"></switch>
+  </view>
+
+  <view class="cu-form-group" wx:if="{{isChecked}}">
+    <view class="">当前日期</view>
+    <picker mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange" style="margin-left: 57%;">
+        {{date}}
+    </picker>
+
+  </view>
+
+
+  <view class="cu-form-group">
+    <view class="title">刷卡金额：</view>
+    <input placeholder="" name="money" type="digit"></input>
+  </view>
+  <view class="cu-bar bg-white">
+    <view class="action">
+      <text class="title"></text>费率
+    </view>
+    <view class="action">
+      <radio-group bindchange="Setfee">
+        <label class="margin-left-sm">
+          <radio class="blue sm radio" value="0.0055" checked></radio>
+          <text> 0.0055</text>
+        </label>
+        <label class="margin-left-sm">
+          <radio class="blue sm radio" value="0.006"></radio>
+          <text> 0.006</text>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <button form-type="submit" class="addLiushui">提交</button>
+</form>

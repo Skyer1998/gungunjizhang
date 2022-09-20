@@ -1,0 +1,4 @@
+/* pages/get/shouyi.wxss */
+page{
+  background-color: #ffffff;
+}

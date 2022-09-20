@@ -1,0 +1,27 @@
+/* pages/get/xykapply.wxss */
+.title{
+    margin-top: 30rpx;
+    display: flex;
+    border: black 3rpx solid;
+}
+.title-item{
+    align-items: center;
+    text-align: center;
+    width: 33.3%;
+}
+.list-item{
+    margin-top: 20rpx;
+    align-items: center;
+    text-align: center;
+    width: 33.3%; 
+    height: 65rpx;
+}
+.list{
+    display: flex;
+}
+.zhengxin-text{
+    margin-top: 30rpx;
+    display: grid;
+    text-align: center;
+    align-items: center;
+}

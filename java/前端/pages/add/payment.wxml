@@ -1,0 +1,20 @@
+<!--pages/add/liushui.wxml-->
+<view class="demo-box">
+  <form bindsubmit="onSubmit" bindreset="onReset">
+    <picker class="picker" value="{{index}}" range="{{list}}" range-key="card_number" bindchange='bindPickerChange'>
+	<view>请选择卡片:{{list[index].card_number}}</view>
+    </picker>
+    <view class="section" wx:if="{{isChecked}}">
+  <picker mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+    <input class="picker" name="money" type="digit"></input>
+    <switch checked="{{isChecked}}" bindchange="changeSwitch" color="#0066ff"/>还款日期不是今天
+    <button form-type="submit"  class="addLiushui">添加还款记录</button>
+    <button form-type="reset"  class="addLiushui">重置</button>
+    </form>
+    </view>
+    <text class="huankuan" >当前还需还款{{huankuan}}</text> 

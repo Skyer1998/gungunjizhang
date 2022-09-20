@@ -1,0 +1,27 @@
+/**index.wxss**/
+.grid-item{
+    border-top:2rpx solid #DDDDDD;
+    border-bottom:2rpx solid #DDDDDD;
+    background-color:	#F8F8FF;
+    border-radius: 5rpx;
+    margin-top: 10rpx;
+    
+}
+.grid-item-top{
+    display:flex;
+}
+.grid-item-second{
+    display: flex;
+    font-size: 24rpx;
+  
+}
+.grid-item-second-left{
+    display: grid;
+    width: 25%;
+    margin-top: 5rpx;
+}
+.imag{
+    width: 30rpx;
+    height: 30rpx;
+    margin-top:5rpx ;
+}

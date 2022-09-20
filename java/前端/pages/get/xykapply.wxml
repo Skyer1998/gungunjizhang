@@ -1,0 +1,27 @@
+<!--pages/get/xykapply.wxml-->
+<view class="zhengxin-text">
+<view>三个月申请次数{{zhengxin.threetimes}}</view>
+<view style="margin-top: 30rpx;"> 六个月申请次数{{zhengxin.sixtimes}}</view>
+</view>
+<view id="title" class="title">
+<view class="title-item">查询日期</view>
+<view class="title-item">查询机构</view>
+<view class="title-item" >是否批准</view>
+</view>
+<view wx:for="{{zhengxin.zhengxin}}"  wx:key="index">
+<view class="flex text-red" wx:if="{{index<zhengxin.threetimes}}">
+<view class="list-item">{{item.date}}</view>
+<view  class="list-item">{{item.bank}}</view>
+<view  class="list-item">{{item.approve}}</view>
+</view>
+<view class="flex text-blue" wx:elif="{{index<zhengxin.sixtimes}}">
+<view class="list-item">{{item.date}}</view>
+<view  class="list-item">{{item.bank}}</view>
+<view  class="list-item">{{item.approve}}</view>
+</view>
+<view class="flex " wx:else>
+<view class="list-item">{{item.date}}</view>
+<view  class="list-item">{{item.bank}}</view>
+<view  class="list-item">{{item.approve}}</view>
+</view>
+</view>

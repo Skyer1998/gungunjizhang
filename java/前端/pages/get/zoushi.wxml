@@ -1,0 +1,9 @@
+<!--pages/get/zoushi.wxml-->
+<view class="container padding-top" >
+    <text class="text-blue">最近四个月刷卡手续费走势</text>
+   <f2 class="f2-chart" onInit="{{onInitChart}}" />
+ </view>
+ <view class="container padding-top">
+    <text class="text-blue">最近四个月分期手续费走势</text>
+   <f2 class="f2-chart" onInit="{{onInitChart1}}" />
+ </view>

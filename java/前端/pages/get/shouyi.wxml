@@ -1,0 +1,16 @@
+<!--pages/get/shouyi.wxml-->
+<view class="text-black text-bold text-center">本程序只显示最近30天的收益</view>
+<view class="flex justify-around bg-green">
+    <view class="text-black text-bold">日期</view>
+    <view class="text-black text-bold" style="padding-left: 140rpx;">收益</view>
+</view>
+<view wx:for="{{shouyi}}" class="bg-gradual-blue">
+  <view class="bg-cyan flex justify-around" wx:if="{{index % 2 == 0}}">
+    <view >{{item.date}}</view>
+    <view class="margin-left-xl">{{item.shouyi}}</view>
+  </view>
+  <view class="bg-blue flex justify-around" wx:else>
+  <view>{{item.date}}</view>
+  <view class="margin-left-xl">{{item.shouyi}}</view>
+  </view>
+</view>

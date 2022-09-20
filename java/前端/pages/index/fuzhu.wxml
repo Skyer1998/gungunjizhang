@@ -1,0 +1,53 @@
+<!--pages/index/fuzhu.wxml-->
+<view class="grid-list">
+    <view class="grid-item " bindtap="addfenqi">
+        <image src="../images/fenqi.jpeg"></image>
+        <text>添加分期</text>
+    </view>
+    <view class="grid-item" bindtap="updatebill">
+        <image src="../images/update.jpeg"></image>
+        <text>更新账单</text>
+    </view>
+    <view class="grid-item" bindtap="addzhengxin">
+        <image src="../images/zhengxin.jpeg"></image>
+        <text>添加征信</text>
+    </view>
+    <view class="grid-item" bindtap="getxyklist">
+        <image src="../images/list.jpeg"></image>
+        <text>信用卡申请记录</text>
+    </view>
+    <view class="grid-item" bindtap="addpayment">
+        <image src="../images/addpayment.jpeg"></image>
+        <text>添加还款</text>
+    </view>
+    <view class="grid-item" bindtap="getfuzhai">
+        <image src="../images/fuzhai.jpeg"></image>
+        <text>查看负债</text>
+    </view>
+    <view class="grid-item" bindtap="getsoulutin">
+        <image src="../images/soulution.jpeg"></image>
+        <text>解决方案</text>
+    </view>
+    <view class="grid-item" bindtap="getzoushi">
+        <image src="../images/zoushi.jpeg"></image>
+        <text>查看走势</text>
+    </view>
+
+    <view class="grid-item" bindtap="getstart">
+        <image src="../images/start.jpeg"></image>
+        <text>查看评分</text>
+    </view>
+    <view class="grid-item" bindtap="getshouyi">
+        <image src="../images/shouyi.jpeg"></image>
+        <text>查看收益</text>
+    </view>
+    <view class="grid-item" bindtap="gethuankuanjin">
+        <image src="../images/huankuanjin.jpeg"></image>
+        <text>还款金</text>
+    </view>
+    <view class="grid-item" bindtap="gethuodong">
+        <image src="../images/huodong.jpeg"></image>
+        <text>刷卡活动</text>
+    </view>
+
+</view>

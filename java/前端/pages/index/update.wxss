@@ -1,0 +1,52 @@
+/* pages/index/update.wxss */
+.picker{
+    margin-top: 25rpx;
+    border: black 3rpx solid;
+    border-radius: 10rpx;
+    background-color: white;
+}
+.update{
+    margin-top: 30rpx;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    
+}
+.button_get{
+    margin-top: 20rpx;
+    border-radius: 30rpx;
+    width: 100%;
+    background-color: #0066ff;
+}
+.tiao{
+    margin-top: 10rpx;
+    border-radius: 30rpx;
+
+}
+.grid-list{
+    margin-top: 50rpx;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1rpx solid #efefef;
+    border-top: 1rpx solid #efefef;
+}
+.grid-item{
+    width: 50%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1rpx solid #efefef;
+    border-right: 1rpx solid #efefef;
+    box-sizing: border-box;
+}
+.grid-item image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.grid-item text{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+   
+}

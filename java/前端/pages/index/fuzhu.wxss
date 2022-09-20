@@ -1,0 +1,32 @@
+/* pages/index/fuzhu.wxss */
+/* pages/index/fuzhu.wxss */
+page{
+    background-color: #FFFFFF;
+}
+.grid-list{
+    margin-top: 30rpx;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1rpx solid #efefef;
+    border-left: 1rpx solid #efefef;
+}
+.grid-item{
+    width: 25%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1rpx solid #efefef;
+    border-bottom: 1rpx solid #efefef;
+    box-sizing: border-box ;
+
+}
+.grid-item image{
+   width: 60rpx;
+   height: 60rpx;
+}
+.grid-item text{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}

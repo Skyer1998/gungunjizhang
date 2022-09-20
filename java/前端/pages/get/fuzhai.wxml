@@ -1,0 +1,23 @@
+<!--pages/get/fuzhai.wxml-->
+<view class="padding bg-white text-blue" style="text-align: center;">每个月详细负债</view>
+<view wx:for="{{fuzhaimonth}}">
+  <view class="padding bg-white">
+    <view class="cu-progress round sm striped active:true round">
+      <text style="width: 10%;text-align: center;">{{item.month}}月</text>
+      <view class="bg-red " style="width:{{item.percent}};color: black;font-style: italic;">{{item.percent}}</view>
+    </view>
+    </view>
+
+</view>
+<view wx:for="{{fuzhai}}">
+<view class="padding bg-white text-blue">卡号:{{item.card_number}}</view>
+<view wx:for="{{item.fuzhai}}">
+  <view class="padding bg-white">
+    <view class="cu-progress round sm striped active:true round">
+      <text style="width: 10%;text-align: center;">{{item.month}}月</text>
+      <view class="bg-red " style="width:{{item.percent}};color: black;font-style: italic;">{{item.percent}}</view>
+    </view>
+
+    </view>
+</view>
+</view>

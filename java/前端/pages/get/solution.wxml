@@ -1,0 +1,23 @@
+<!--pages/get/solution.wxml-->
+<view class="text-blue" style="text-align: center;">刷卡解决方案</view>
+<view class="text-blue" style="text-align: center;">目前待还款列表</view>
+<view class="text-blue" style="text-align: center;">先计算2410与9601</view>
+<view wx:for="{{list}}">
+<view class="bg-grey">
+  <view class="flex " style="text-align: center;align-items: center;margin-left: 30%;">
+      <view class=" padding-sm margin-xs radius">卡号:</view>
+      <view class="padding-sm margin-xs radius " >{{item.card_number}}</view>
+    </view>
+  </view>
+    <view class="flex bg-white">
+      <view class=" padding-sm margin-xs radius">还款日:</view>
+      <view class="padding-sm margin-xs radius " >{{item.payment_day}}</view>
+    </view>
+    <view class="flex bg-white">
+      <view class=" padding-sm margin-xs radius">还款金额:</view>
+      <view class="padding-sm margin-xs radius " >{{item.now_payment_bill}}</view>
+    </view>
+    </view>
+    <view class="bg-green text-center">解决方案如下</view>
+
+
